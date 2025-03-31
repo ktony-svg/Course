@@ -38,3 +38,34 @@
 #bio ul li {
     margin: 5px 0;
 }
+/* Default Light Mode */
+body {
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+/* Style for the Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+}
+
+.dark-mode #theme-toggle {
+    background-color: #ddd;
+    color: black;
+}
+
