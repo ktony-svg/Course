@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeToggleBtn = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // Check and apply saved theme preference
+    // Check if the user has a saved theme preference
     if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-mode");
     }
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggleBtn.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
 
-        // Save user preference
+        // Save theme preference
         if (body.classList.contains("dark-mode")) {
             localStorage.setItem("theme", "dark");
         } else {
