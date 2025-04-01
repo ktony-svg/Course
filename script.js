@@ -1,3 +1,19 @@
+#live-clock {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    border-radius: 8px;
+    width: 150px;
+    margin: 10px auto;
+}
+.dark-mode #live-clock {
+    background: white;
+    color: black;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const themeToggleBtn = document.getElementById("theme-toggle");
     const body = document.body;
