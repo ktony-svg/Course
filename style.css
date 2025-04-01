@@ -1,3 +1,53 @@
+/* Default Light Mode */
+body {
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+}
+
+.dark-mode #theme-toggle {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Live Clock */
+#live-clock {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    background: #222;
+    color: white;
+    border-radius: 8px;
+    width: 120px;
+    margin: 10px auto;
+}
+
+.dark-mode #live-clock {
+    background: white;
+    color: black;
+}
+
+/* Skills Section */
 #skills {
     padding: 20px;
     max-width: 600px;
@@ -23,7 +73,7 @@
 
 .progress-bar {
     height: 20px;
-    width: 0%; /* Initially set to 0% */
+    width: 0%;
     background-color: #4CAF50;
     border-radius: 10px;
     transition: width 1.5s ease-in-out;
@@ -35,94 +85,4 @@
 
 .dark-mode .progress-bar {
     background-color: #00C3FF;
-}
-
-#live-clock {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    background: #222;
-    color: white;
-    border-radius: 8px;
-    width: 150px;
-    margin: 10px auto;
-}
-.dark-mode #live-clock {
-    background: white;
-    color: black;
-}
-
-/* Default Light Mode */
-body {
-    background-color: #ffffff;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Dark Mode */
-body.dark-mode {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-}
-
-/* Style for the Toggle Button */
-#theme-toggle {
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    padding: 10px 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #444;
-    color: white;
-    font-size: 14px;
-}
-
-.dark-mode #theme-toggle {
-    background-color: #ddd;
-    color: black;
-}
-
-/* About Section */
-#about {
-    background-color: #f4f4f4;
-    padding: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#about-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-#profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-#bio {
-    max-width: 600px;
-}
-
-#bio h3 {
-    margin-top: 20px;
-    color: #333;
-}
-
-#bio ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#bio ul li {
-    margin: 5px 0;
 }
