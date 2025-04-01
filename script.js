@@ -1,42 +1,14 @@
-#skills {
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
+function animateProgressBars() {
+    const progressBars = document.querySelectorAll(".progress-bar");
+
+    progressBars.forEach(bar => {
+        const targetWidth = bar.getAttribute("data-skill");
+        bar.style.width = targetWidth + "%";
+    });
 }
 
-.skill {
-    margin-bottom: 15px;
-}
-
-.skill span {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.progress-container {
-    width: 100%;
-    background-color: #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    height: 20px;
-    width: 0%; /* Initially set to 0% */
-    background-color: #4CAF50;
-    border-radius: 10px;
-    transition: width 1.5s ease-in-out;
-}
-
-.dark-mode .progress-container {
-    background-color: #444;
-}
-
-.dark-mode .progress-bar {
-    background-color: #00C3FF;
-}
-
+// Run animation when the page loads
+window.addEventListener("load", animateProgressBars);
 function updateClock() {
     const clockElement = document.getElementById("live-clock");
     const now = new Date();
