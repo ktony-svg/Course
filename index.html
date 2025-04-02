@@ -9,8 +9,6 @@
 </head>
 <body>
     <header>
-        <button id="theme-toggle">Toggle Theme</button>
-        <div id="live-clock"></div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -29,35 +27,45 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <img src="profile.jpg" alt="My Photo">
-        <p>Hello! I am a senior college student passionate about web development, programming, and technology.</p>
+        <div id="about-content">
+            <img src="path-to-your-image.jpg" alt="My Photo" id="profile-image">
+            <div id="bio">
+                <p>Hello! I am a senior college student majoring in Computer Science. I am passionate about web development and programming. My journey began with basic coding, and over time, I have developed skills in building interactive websites and applications. I love solving problems and learning new technologies to enhance my development toolkit.</p>
+                <p>When I am not coding, I enjoy playing video games, reading tech blogs, and working on personal projects. My goal is to contribute to innovative projects and become a software engineer with a focus on web technologies.</p>
+                <h3>Education:</h3>
+                <ul>
+                    <li>Bachelor's in Computer Science - XYZ University (Expected Graduation: 2025)</li>
+                    <li>Web Development Bootcamp (Completed: 2024)</li>
+                </ul>
+                <h3>Skills:</h3>
+                <ul>
+                    <li>HTML5, CSS3, JavaScript</li>
+                    <li>React.js, Node.js</li>
+                    <li>Database Management (MySQL, MongoDB)</li>
+                    <li>Git and GitHub Version Control</li>
+                </ul>
+                <h3>Hobbies:</h3>
+                <ul>
+                    <li>Programming and building projects</li>
+                    <li>Photography</li>
+                    <li>Gaming and eSports</li>
+                </ul>
+            </div>
+        </div>
     </section>
-
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skill">
-            <span>HTML</span>
-            <div class="progress-container">
-                <div class="progress-bar" data-skill="90"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <span>CSS</span>
-            <div class="progress-container">
-                <div class="progress-bar" data-skill="80"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <span>JavaScript</span>
-            <div class="progress-container">
-                <div class="progress-bar" data-skill="75"></div>
-            </div>
-        </div>
-    </section>
-
+    
     <section id="projects">
         <h2>Projects Portfolio</h2>
-        <div id="project-container"></div>
+        <div id="project-container">
+            <!-- Projects will be dynamically loaded here -->
+        </div>
+    </section>
+    
+    <section id="blog">
+        <h2>Blog</h2>
+        <div id="blog-container">
+            <!-- Blog posts will be dynamically loaded here -->
+        </div>
     </section>
     
     <section id="contact">
@@ -79,5 +87,38 @@
     <footer>
         <p>&copy; 2025 My Personal Website</p>
     </footer>
+
+    <script>
+        // Dynamic Greeting Based on Time of Day
+        function updateGreeting() {
+            const greetingElement = document.getElementById("greeting");
+            const hour = new Date().getHours();
+            let greeting;
+            if (hour < 12) {
+                greeting = "Good morning!";
+            } else if (hour < 18) {
+                greeting = "Good afternoon!";
+            } else {
+                greeting = "Good evening!";
+            }
+            greetingElement.textContent = greeting;
+        }
+        updateGreeting();
+
+        // Form Validation
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                event.preventDefault();
+            } else if (!email.includes("@")) {
+                alert("Please enter a valid email address.");
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
