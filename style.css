@@ -1,3 +1,4 @@
+/* style.css */
 /* Default Light Mode */
 body {
     background-color: #ffffff;
@@ -24,7 +25,7 @@ body.dark-mode {
     color: white;
 }
 
-.dark-mode #theme-toggle {
+body.dark-mode #theme-toggle {
     background-color: #ddd;
     color: black;
 }
@@ -42,7 +43,7 @@ body.dark-mode {
     margin: 10px auto;
 }
 
-.dark-mode #live-clock {
+body.dark-mode #live-clock {
     background: white;
     color: black;
 }
@@ -79,10 +80,50 @@ body.dark-mode {
     transition: width 1.5s ease-in-out;
 }
 
-.dark-mode .progress-container {
+body.dark-mode .progress-container {
     background-color: #444;
 }
 
-.dark-mode .progress-bar {
+body.dark-mode .progress-bar {
     background-color: #00C3FF;
+}
+
+/* Basic Styling for other elements */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+body.dark-mode footer {
+    background-color: #333;
+    color: #f0f0f0;
 }
