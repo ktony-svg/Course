@@ -29,23 +29,7 @@ body.dark-mode #theme-toggle {
     color: black;
 }
 
-#live-clock {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 8px;
-    background: #222;
-    color: white;
-    border-radius: 8px;
-    width: 120px;
-    margin: 8px 10px; /* Adjusted margin */
-    float:right; /* position to the right */
-}
-
-body.dark-mode #live-clock {
-    background: white;
-    color: black;
-}
+/* ... other styles ... */
 
 nav ul {
     list-style: none;
@@ -71,6 +55,27 @@ nav li a {
 nav li a:hover {
     background-color: #111;
 }
+
+#live-clock {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    background: #222;
+    color: white;
+    border-radius: 8px;
+    width: 120px;
+    margin: 8px 10px; /* Adjusted margin */
+    float:right; /* position to the right */
+}
+
+body.dark-mode #live-clock {
+    background: white;
+    color: black;
+}
+
+/* ... rest of the styles ... */
+
 
 section {
     padding: 20px;
