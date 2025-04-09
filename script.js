@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Theme Toggle
     const themeToggleBtn = document.getElementById("theme-toggle");
     const body = document.body;
 
@@ -19,43 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Live Clock
     function updateClock() {
-        const clockElement = document.getElementById("live-clock");
         const now = new Date();
-        let hours = now.getHours();
-        let minutes = now.getMinutes();
-        let seconds = now.getSeconds();
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        const seconds = String(now.getSeconds()).padStart(2, "0");
+        const timeString = `${hours}:${minutes}:${seconds}`;
 
-        hours = hours < 10 ? "0" + hours : hours;
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        clockElement.textContent = `${hours}:${minutes}:${seconds}`;
-        document.getElementById("current-time").textContent = `${hours}:${minutes}:${seconds}`;
+        document.getElementById("live-clock").textContent = timeString;
+        document.getElementById("current-time").textContent = timeString;
     }
 
     setInterval(updateClock, 1000);
     updateClock();
 
-    // Dynamic Greeting
     const greetingElement = document.getElementById("greeting");
     const hour = new Date().getHours();
     let greeting = hour < 12 ? "Good morning!" : hour < 18 ? "Good afternoon!" : "Good evening!";
     greetingElement.textContent = greeting;
 
-    // Progress Bar Animation
-    function animateProgressBars() {
-        const progressBars = document.querySelectorAll(".progress-bar");
-        progressBars.forEach(bar => {
-            const targetWidth = bar.getAttribute("data-skill");
-            bar.style.width = targetWidth + "%";
-        });
-    }
-
-    animateProgressBars();
-
-    // Contact Form Validation
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -70,13 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Smooth Scrolling (This is the important part)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener("click", function(e) {
             e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
             });
         });
     });
