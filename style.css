@@ -1,18 +1,15 @@
-/* style.css */
-/* Default Light Mode */
 body {
-    background-color: #ffffff;
+    background-color: #e0f7fa; /* Light blue background */
     color: #333;
     transition: background-color 0.3s, color 0.3s;
+    font-family: Arial, sans-serif;
 }
 
-/* Dark Mode */
 body.dark-mode {
     background-color: #1e1e1e;
     color: #f0f0f0;
 }
 
-/* Theme Toggle Button */
 #theme-toggle {
     position: fixed;
     top: 10px;
@@ -23,6 +20,7 @@ body.dark-mode {
     border-radius: 5px;
     background-color: #444;
     color: white;
+    font-size: 1.2em; /* Increase emoji size */
 }
 
 body.dark-mode #theme-toggle {
@@ -30,7 +28,6 @@ body.dark-mode #theme-toggle {
     color: black;
 }
 
-/* Live Clock */
 #live-clock {
     font-size: 1.2rem;
     font-weight: bold;
@@ -48,7 +45,6 @@ body.dark-mode #live-clock {
     color: black;
 }
 
-/* Skills Section */
 #skills {
     padding: 20px;
     max-width: 600px;
@@ -88,7 +84,6 @@ body.dark-mode .progress-bar {
     background-color: #00C3FF;
 }
 
-/* Basic Styling for other elements */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -126,4 +121,58 @@ footer {
 body.dark-mode footer {
     background-color: #333;
     color: #f0f0f0;
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.home-content {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Projects Section */
+#project-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Blog Section */
+#blog-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blog-post {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.blog-post img {
+    width: 100%;
+    border-radius: 8px;
 }
