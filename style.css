@@ -165,3 +165,54 @@ body.dark-mode footer {
     margin-bottom: 20px;
     text-align: center;
 }
+/* ... other styles ... */
+
+/* Contact Form Styling */
+#contact-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: calc(100% - 12px); /* Adjust width to account for padding and border */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+/* Remove Hover Effect on Portfolio and Blog */
+.project:hover, .blog-post:hover {
+    transform: none; /* Remove any transform on hover */
+}
