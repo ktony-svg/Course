@@ -98,7 +98,7 @@ body.dark-mode footer {
 }
 
 #profile-image {
-    max-width: 250px;
+    max-width: 350px; /* Slightly larger image */
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -191,7 +191,7 @@ button[type="submit"]:hover {
     background-color: white;
     border-radius: 8px;
     padding: 20px;
-    width: 30%; /* Adjust width */
+    width: 30%;
     text-align: center;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -217,4 +217,28 @@ button[type="submit"]:hover {
 
 .github-link:hover {
     background-color: #cce0ff;
+}
+
+/* About Me Section */
+#about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bio {
+    text-align: left;
+    max-width: 800px;
+    font-size: 18px; /* Slightly larger text */
+    line-height: 1.6;
+}
+
+#bio ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
