@@ -1,8 +1,9 @@
 body {
-    background-color: #e0f7fa; /* Light blue background */
+    background-color: #a8cfff; /* Blue background */
     color: #333;
     transition: background-color 0.3s, color 0.3s;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif; /* Desirable font */
+    font-size: 16px; /* Bigger font size */
 }
 
 body.dark-mode {
@@ -20,7 +21,7 @@ body.dark-mode {
     border-radius: 5px;
     background-color: #444;
     color: white;
-    font-size: 1.2em; /* Increase emoji size */
+    font-size: 1.2em;
 }
 
 body.dark-mode #theme-toggle {
@@ -100,7 +101,7 @@ nav li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 20px; /* Increased padding */
     text-decoration: none;
 }
 
@@ -130,49 +131,37 @@ body.dark-mode footer {
 }
 
 .home-content {
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    background: rgba(255, 255, 255, 0.8);
     padding: 30px;
     border-radius: 10px;
     display: inline-block;
 }
 
-/* Projects Section */
-#project-container {
+/* About Me Image */
+#profile-image {
+    max-width: 250px; /* Reduced image size */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Projects and Blog Images */
+#project-container img, #blog-container img {
+    max-width: 300px; /* Consistent image size */
+    max-height: 200px;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Projects and Blog Vertical Alignment */
+#project-container, #blog-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.project {
+.project, .blog-post {
     width: 30%;
     margin-bottom: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.project:hover {
-    transform: translateY(-10px);
-}
-
-.project img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-/* Blog Section */
-#blog-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.blog-post {
-    width: 30%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.blog-post img {
-    width: 100%;
-    border-radius: 8px;
 }
