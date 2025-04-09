@@ -15,130 +15,91 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button id="theme-toggle">Toggle Theme</button></li>
+                <li><button id="theme-toggle">☀️</button></li>
                 <li><div id="live-clock"></div></li>
             </ul>
         </nav>
     </header>
-    
+
     <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p id="greeting"></p>
+        <div class="home-content">
+            <p id="greeting"></p>
+            <h1>Hello! I am Newton Kibe</h1>
+            <p>Current Time: <span id="current-time"></span></p>
+        </div>
     </section>
-    
+
     <section id="about">
         <h2>About Me</h2>
         <div id="about-content">
             <img src="WhatsApp Image 2025-03-31 at 11.29.00_c2fb6d29.jpg" alt="My Photo" id="profile-image">
             <div id="bio">
-                <p>Hello! I am a senior college student majoring in Computer Science. I am passionate about web development and programming. My journey began with basic coding, and over time, I have developed skills in building interactive websites and applications. I love solving problems and learning new technologies to enhance my development toolkit.</p>
-                <p>When I am not coding, I enjoy playing video games, reading tech blogs, and working on personal projects. My goal is to contribute to innovative projects and become a software engineer with a focus on web technologies.</p>
-                <h3>Education:</h3>
-                <ul>
-                    <li>Bachelor's in Computer Science - XYZ University (Expected Graduation: 2025)</li>
-                    <li>Web Development Bootcamp (Completed: 2024)</li>
-                </ul>
-                <h3>Skills:</h3>
-                <div id="skills">
-                    <div class="skill">
-                        <span>HTML5, CSS3, JavaScript</span>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>React.js, Node.js</span>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill="70"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Database Management (MySQL, MongoDB)</span>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill="60"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Git and GitHub Version Control</span>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill="80"></div>
-                        </div>
-                    </div>
+                <p>Hello! I am a senior college student majoring in Computer Science...</p>
                 </div>
-                <h3>Hobbies:</h3>
-                <ul>
-                    <li>Programming and building projects</li>
-                    <li>Photography</li>
-                    <li>Gaming and eSports</li>
-                </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects Portfolio</h2>
+        <div id="project-container">
+            <div class="project">
+                <img src="6dbd4d7ef7f9c3507fe4d411602f7f26.jpg" alt="E-commerce Website">
+                <h3>E-commerce Website</h3>
+                <p>Developed a fully functional e-commerce website using React and Node.js.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <img src="d5c3502901031ff59ef85ea71ea3d9c8.jpg" alt="Task Management App">
+                <h3>Task Management App</h3>
+                <p>Created a task management application with real-time updates using Socket.io.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <img src="4439a2fc6291965d96ce4fd6fe857a92.jpg" alt="Weather Dashboard">
+                <h3>Weather Dashboard</h3>
+                <p>Built a weather dashboard that displays current weather and forecasts using a public API.</p>
+                <a href="#">View Project</a>
             </div>
         </div>
     </section>
-    
-   <section id="projects">
-    <h2>Projects Portfolio</h2>
-    <div id="project-container">
-        <div class="project">
-            <img src="6dbd4d7ef7f9c3507fe4d411602f7f26.jpg" alt="E-commerce Website">
-            <h3>E-commerce Website</h3>
-            <p>Developed a fully functional e-commerce website using React and Node.js.</p>
-            <a href="#">View Project</a>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <div id="blog-container">
+            <div class="blog-post">
+                <img src="WhatsApp Image 2025-04-07 at 15.27.43_e0b97b5e.jpg" alt="Introduction to React Hooks">
+                <h3>Introduction to React Hooks</h3>
+                <p>Learn about React Hooks and simplify state management.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-post">
+                <img src="WhatsApp Image 2025-04-07 at 15.27.07_cd0bc623.jpg" alt="Getting Started with Node.js">
+                <h3>Getting Started with Node.js</h3>
+                <p>Beginner's guide to Node.js setup and first application.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-post">
+                <img src="WhatsApp Image 2025-04-07 at 15.27.07_daa218f8.jpg" alt="Tips for Effective Code Reviews">
+                <h3>Tips for Effective Code Reviews</h3>
+                <p>Improve code review process with helpful tips.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
-        <div class="project">
-            <img src="d5c3502901031ff59ef85ea71ea3d9c8.jpg" alt="Task Management App">
-            <h3>Task Management App</h3>
-            <p>Created a task management application with real-time updates using Socket.io.</p>
-            <a href="#">View Project</a>
-        </div>
-        <div class="project">
-            <img src="4439a2fc6291965d96ce4fd6fe857a92.jpg" alt="Weather Dashboard">
-            <h3>Weather Dashboard</h3>
-            <p>Built a weather dashboard that displays current weather and forecasts using a public API.</p>
-            <a href="#">View Project</a>
-        </div>
-    </div>
-</section>
-    
- <section id="blog">
-    <h2>Blog</h2>
-    <div id="blog-container">
-        <div class="blog-post">
-            <img src="WhatsApp Image 2025-04-07 at 15.27.43_e0b97b5e.jpg" alt="Introduction to React Hooks">
-            <h3>Introduction to React Hooks</h3>
-            <p>Learn about the basics of React Hooks and how they can simplify state management.</p>
-            <a href="#">Read More</a>
-        </div>
-        <div class="blog-post">
-            <img src="WhatsApp Image 2025-04-07 at 15.27.07_cd0bc623.jpg" alt="Getting Started with Node.js">
-            <h3>Getting Started with Node.js</h3>
-            <p>A beginner's guide to setting up and running your first Node.js application.</p>
-            <a href="#">Read More</a>
-        </div>
-        <div class="blog-post">
-            <img src="WhatsApp Image 2025-04-07 at 15.27.07_daa218f8.jpg" alt="Tips for Effective Code Reviews">
-            <h3>Tips for Effective Code Reviews</h3>
-            <p>Improve your code review process with these helpful tips and best practices.</p>
-            <a href="#">Read More</a>
-        </div>
-    </div>
-</section>
-    
+    </section>
+
     <section id="contact">
         <h2>Contact Me</h2>
         <form id="contact-form">
             <label for="name">Name:</label>
             <input type="text" id="name" required>
-            
             <label for="email">Email:</label>
             <input type="email" id="email" required>
-            
             <label for="message">Message:</label>
             <textarea id="message" required></textarea>
-            
             <button type="submit">Send</button>
         </form>
     </section>
-    
+
     <footer>
         <p>&copy; 2025 My Personal Website</p>
     </footer>
