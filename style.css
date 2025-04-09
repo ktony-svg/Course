@@ -1,9 +1,9 @@
 body {
-    background-color: #a8cfff; /* Blue background */
+    background-color: #a8cfff;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
-    font-family: 'Arial', sans-serif; /* Desirable font */
-    font-size: 16px; /* Bigger font size */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
 }
 
 body.dark-mode {
@@ -46,51 +46,12 @@ body.dark-mode #live-clock {
     color: black;
 }
 
-#skills {
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
-}
-
-.skill {
-    margin-bottom: 15px;
-}
-
-.skill span {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.progress-container {
-    width: 100%;
-    background-color: #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    height: 20px;
-    width: 0%;
-    background-color: #4CAF50;
-    border-radius: 10px;
-    transition: width 1.5s ease-in-out;
-}
-
-body.dark-mode .progress-container {
-    background-color: #444;
-}
-
-body.dark-mode .progress-bar {
-    background-color: #00C3FF;
-}
-
 nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: #333;
+    overflow: hidden;
 }
 
 nav li {
@@ -101,7 +62,7 @@ nav li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 20px; /* Increased padding */
+    padding: 14px 20px;
     text-decoration: none;
 }
 
@@ -124,7 +85,6 @@ body.dark-mode footer {
     color: #f0f0f0;
 }
 
-/* Home Section */
 #home {
     text-align: center;
     padding: 100px 20px;
@@ -137,37 +97,41 @@ body.dark-mode footer {
     display: inline-block;
 }
 
-/* About Me Image */
 #profile-image {
-    max-width: 250px; /* Reduced image size */
+    max-width: 250px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
-/* Projects and Blog Images */
-#project-container img, #blog-container img {
-    max-width: 300px; /* Consistent image size */
+#project-container img,
+#blog-container img {
+    max-width: 300px;
     max-height: 200px;
-    object-fit: cover; /* Maintain aspect ratio */
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
 
-/* Projects and Blog Vertical Alignment */
-#project-container, #blog-container {
+#project-container img:hover,
+#blog-container img:hover {
+    transform: scale(1.05);
+}
+
+#project-container,
+#blog-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.project, .blog-post {
+.project,
+.blog-post {
     width: 30%;
     margin-bottom: 20px;
     text-align: center;
 }
-/* ... other styles ... */
 
-/* Contact Form Styling */
 #contact-form {
     max-width: 400px;
     margin: 20px auto;
@@ -186,12 +150,14 @@ label {
     font-weight: bold;
 }
 
-input[type="text"], input[type="email"], textarea {
-    width: calc(100% - 12px); /* Adjust width to account for padding and border */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 12px);
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-sizing: border-box;
 }
 
 textarea {
@@ -210,9 +176,4 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #3e8e41;
-}
-
-/* Remove Hover Effect on Portfolio and Blog */
-.project:hover, .blog-post:hover {
-    transform: none; /* Remove any transform on hover */
 }
