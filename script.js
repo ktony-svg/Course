@@ -1,4 +1,3 @@
-/* script.js */
 document.addEventListener("DOMContentLoaded", () => {
     // Theme Toggle
     const themeToggleBtn = document.getElementById("theme-toggle");
@@ -6,11 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-mode");
+        themeToggleBtn.textContent = "🌙";
     }
 
     themeToggleBtn.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
-        localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+        if (body.classList.contains("dark-mode")) {
+            themeToggleBtn.textContent = "🌙";
+            localStorage.setItem("theme", "dark");
+        } else {
+            themeToggleBtn.textContent = "☀️";
+            localStorage.setItem("theme", "light");
+        }
     });
 
     // Live Clock
@@ -26,10 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+        document.getElementById("current-time").textContent = `${hours}:${minutes}:${seconds}`;
     }
 
     setInterval(updateClock, 1000);
-    updateClock(); // Initialize immediately
+    updateClock();
 
     // Dynamic Greeting
     const greetingElement = document.getElementById("greeting");
