@@ -166,17 +166,17 @@ textarea {
 }
 
 button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #a8cfff; /* Match background blue */
+    color: black; /* Text color black */
     padding: 10px 15px;
-    border: none;
+    border: 1px solid #ccc; /* Add a subtle border */
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
 }
 
 button[type="submit"]:hover {
-    background-color: #3e8e41;
+    background-color: #cce0ff; /* Slightly lighter hover color */
 }
 
 /* Projects Section */
@@ -191,10 +191,11 @@ button[type="submit"]:hover {
     background-color: white;
     border-radius: 8px;
     padding: 20px;
-    width: 30%;
+    width: 30%; /* Adjust width */
     text-align: center;
     margin-bottom: 20px;
     box-sizing: border-box;
+    margin: 10px; /* Add margin */
 }
 
 .project-item h3 {
@@ -206,14 +207,14 @@ button[type="submit"]:hover {
 }
 
 .github-link {
-    background-color: #a8cfff; /* Match background color */
-    color: black; /* Change text color to black */
+    background-color: #a8cfff;
+    color: black;
     padding: 10px 15px;
     border-radius: 4px;
     text-decoration: none;
-    border: 1px solid #ccc; /* Add a subtle border */
+    border: 1px solid #ccc;
 }
 
 .github-link:hover {
-    background-color: #cce0ff; /* Slightly lighter hover color */
+    background-color: #cce0ff;
 }
