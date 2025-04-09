@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Smooth Scrolling
+    // Smooth Scrolling (This is the important part)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
