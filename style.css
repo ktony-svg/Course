@@ -194,6 +194,7 @@ button[type="submit"]:hover {
     width: 30%;
     text-align: center;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .project-item h3 {
@@ -205,13 +206,14 @@ button[type="submit"]:hover {
 }
 
 .github-link {
-    background-color: #333;
-    color: white;
+    background-color: #a8cfff; /* Match background color */
+    color: black; /* Change text color to black */
     padding: 10px 15px;
     border-radius: 4px;
     text-decoration: none;
+    border: 1px solid #ccc; /* Add a subtle border */
 }
 
 .github-link:hover {
-    background-color: #555;
+    background-color: #cce0ff; /* Slightly lighter hover color */
 }
